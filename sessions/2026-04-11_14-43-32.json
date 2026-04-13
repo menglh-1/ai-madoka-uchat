@@ -1,0 +1,108 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-11_14-43-32",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……如果您真的很闲，不如去照照镜子，看看自己那副自以为是的表情。"
+    },
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "……你好。……有什么。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=30 / 亲密度=11 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=11 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=100 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=100 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=100 / 亲密开放度=100"
+    },
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "……你好。  \n……怎么今天才来。  \n……不是在等你。"
+    },
+    {
+      "role": "user",
+      "content": "你叫什么名字"
+    },
+    {
+      "role": "assistant",
+      "content": "……樋口円香。\n……你问这个，是在考验我的耐心吗。\n……不过，算了。"
+    },
+    {
+      "role": "user",
+      "content": "你好啊円香，我又会俩了"
+    },
+    {
+      "role": "assistant",
+      "content": "……你总算出现了。  \n……我又没在等着你。  \n……不过，房间确实安静了点。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=20 / 亲密度=100 / 亲密开放度=100"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=20 / 亲密度=100 / 亲密开放度=100"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=100 / 亲密开放度=100"
+    },
+    {
+      "role": "user",
+      "content": "我想你了"
+    },
+    {
+      "role": "assistant",
+      "content": "……想我了？……你这家伙，总是这么直白。……算了，别多想，我又不是在等你。"
+    },
+    {
+      "role": "user",
+      "content": "我爱你"
+    },
+    {
+      "role": "assistant",
+      "content": "……别乱来。  \n……我又没让你说这个。  \n……真是的。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 100,
+    "intimacy": 100,
+    "sex": 100,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [],
+      "events": [],
+      "facts": [
+        "你叫什么名字",
+        "你好啊円香，我又会俩了"
+      ]
+    },
+    "history": []
+  }
+}

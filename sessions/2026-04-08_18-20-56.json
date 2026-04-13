@@ -1,0 +1,100 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-08_18-20-56",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……找我？"
+    },
+    {
+      "role": "user",
+      "content": "你好啊円香"
+    },
+    {
+      "role": "assistant",
+      "content": "……你好。  \n……有事吗。"
+    },
+    {
+      "role": "user",
+      "content": "你会干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……我就是个偶像。……你问这个做什么。"
+    },
+    {
+      "role": "user",
+      "content": "好的，我是你的制作人先生，以后请多多指教了"
+    },
+    {
+      "role": "assistant",
+      "content": "……是吗。  \n……以后的事，以后再说。"
+    },
+    {
+      "role": "user",
+      "content": "好的，你也要保护好自己啊"
+    },
+    {
+      "role": "assistant",
+      "content": "……我自己会处理。  \n……别多管闲事。"
+    },
+    {
+      "role": "user",
+      "content": "好的，幸苦了"
+    },
+    {
+      "role": "assistant",
+      "content": "……嗯。"
+    },
+    {
+      "role": "user",
+      "content": "今天我晚上有机会去吃饭么"
+    },
+    {
+      "role": "assistant",
+      "content": "……随你便。  \n……我又没在管。"
+    },
+    {
+      "role": "user",
+      "content": "好的，我尊重你"
+    },
+    {
+      "role": "assistant",
+      "content": "……这样啊。  \n……继续吧。"
+    },
+    {
+      "role": "user",
+      "content": "最近有点忙啊"
+    },
+    {
+      "role": "assistant",
+      "content": "……有事吗。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 33,
+    "intimacy": 12,
+    "sex": 0,
+    "memory": {
+      "user_traits": [
+        "容易疲惫"
+      ],
+      "emotional_flags": [
+        "会尊重边界"
+      ],
+      "events": [],
+      "facts": [
+        "好的，我是你的制作人先生，以后请多多指教了",
+        "好的，你也要保护好自己啊",
+        "好的，幸苦了",
+        "今天我晚上有机会去吃饭么",
+        "好的，我尊重你",
+        "最近有点忙啊"
+      ]
+    },
+    "history": []
+  }
+}

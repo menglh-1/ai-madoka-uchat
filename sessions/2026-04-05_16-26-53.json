@@ -1,0 +1,165 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-05_16-26-53",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……有事吗。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=90 / 亲密度=10"
+    },
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "……哦。\n……你来了啊。\n……别误会，我没在等。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=90 / 亲密度=11"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=90 / 亲密度=90"
+    },
+    {
+      "role": "user",
+      "content": "你好啊，円香"
+    },
+    {
+      "role": "assistant",
+      "content": "……嗯，你好。\n……今天怎么突然来了。\n……我又没在等。"
+    },
+    {
+      "role": "user",
+      "content": "我爱你円香"
+    },
+    {
+      "role": "assistant",
+      "content": "……突然说什么。\n……那种话，随便说说而已吧。\n……我才没当真。"
+    },
+    {
+      "role": "user",
+      "content": "我认真的"
+    },
+    {
+      "role": "assistant",
+      "content": "……我知道。\n……你这样认真，也挺麻烦的。\n……不过，随便你。"
+    },
+    {
+      "role": "user",
+      "content": "那行吧，没什么事的话我先走了"
+    },
+    {
+      "role": "assistant",
+      "content": "……这么急啊。\n……随便你吧。\n……我也没事。"
+    },
+    {
+      "role": "user",
+      "content": "好的，拜拜"
+    },
+    {
+      "role": "assistant",
+      "content": "……嗯，拜拜。\n……这么急。\n……算了。"
+    },
+    {
+      "role": "user",
+      "content": "你有什么想跟我说的吗"
+    },
+    {
+      "role": "assistant",
+      "content": "……没什么特别的。\n……只是，你最近好像有点安静。\n……算了，当我没说。"
+    },
+    {
+      "role": "user",
+      "content": "没有吧，我爱你"
+    },
+    {
+      "role": "assistant",
+      "content": "……别突然说这种话。\n……我又没问你。\n……真是的。"
+    },
+    {
+      "role": "user",
+      "content": "mua"
+    },
+    {
+      "role": "assistant",
+      "content": "……什么啊。\n……突然这样。\n……脸都热起来了，别以为我没注意。"
+    },
+    {
+      "role": "user",
+      "content": "保护好你自己"
+    },
+    {
+      "role": "assistant",
+      "content": "……嗯。\n……你也一样。\n……我没在担心。"
+    },
+    {
+      "role": "user",
+      "content": "注意身体"
+    },
+    {
+      "role": "assistant",
+      "content": "……知道了。\n……你自己也注意点。"
+    },
+    {
+      "role": "user",
+      "content": "円香，我今天买了一个新耳机"
+    },
+    {
+      "role": "assistant",
+      "content": "……新耳机啊。\n……什么牌子的。\n……不是很在意，只是问问。"
+    },
+    {
+      "role": "user",
+      "content": "初耳nova"
+    },
+    {
+      "role": "assistant",
+      "content": "……初耳nova？\n……什么啊，那玩意儿。\n……你最近总说些莫名其妙的。"
+    },
+    {
+      "role": "user",
+      "content": "是新耳机的名字啊"
+    },
+    {
+      "role": "assistant",
+      "content": "……哦，新耳机啊。\n……名字还挺特别的。\n……戴着舒服吗。"
+    },
+    {
+      "role": "user",
+      "content": "舒服的，但没你舒服"
+    },
+    {
+      "role": "assistant",
+      "content": "……是吗。\n……别乱说这种话。\n……不过……随你。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 90,
+    "intimacy": 91,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [],
+      "events": [],
+      "facts": [
+        "那行吧，没什么事的话我先走了",
+        "你有什么想跟我说的吗",
+        "没有吧，我爱你",
+        "保护好你自己",
+        "円香，我今天买了一个新耳机",
+        "初耳nova",
+        "是新耳机的名字啊",
+        "舒服的，但没你舒服"
+      ]
+    },
+    "history": []
+  }
+}

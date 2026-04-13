@@ -1,0 +1,71 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-07_15-24-44",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……有事吗。"
+    },
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "……嗯。  \n你好。"
+    },
+    {
+      "role": "user",
+      "content": "你会干什么ya"
+    },
+    {
+      "role": "assistant",
+      "content": "……问这个干嘛。\n……练习而已。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=30 / 亲密度=11 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=10 / 亲密度=11 / 亲密开放度=0"
+    },
+    {
+      "role": "user",
+      "content": "你在干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……练习。\n……你呢。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=70 / 亲密度=11 / 亲密开放度=0"
+    },
+    {
+      "role": "user",
+      "content": "你在干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……练习歌。\n……你呢。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 70,
+    "intimacy": 11,
+    "sex": 0,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [],
+      "events": [],
+      "facts": [
+        "你会干什么ya"
+      ]
+    },
+    "history": []
+  }
+}

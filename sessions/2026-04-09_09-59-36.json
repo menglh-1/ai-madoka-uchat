@@ -1,0 +1,52 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-09_09-59-36",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……在那站了很久了吧。真恶心。"
+    },
+    {
+      "role": "user",
+      "content": "nihao1"
+    },
+    {
+      "role": "assistant",
+      "content": "……啧。"
+    },
+    {
+      "role": "user",
+      "content": "你会干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……无聊。"
+    },
+    {
+      "role": "user",
+      "content": "你叫什么名字"
+    },
+    {
+      "role": "assistant",
+      "content": "……啧。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 30,
+    "intimacy": 10,
+    "sex": 0,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [],
+      "events": [],
+      "facts": [
+        "nihao1",
+        "你叫什么名字"
+      ]
+    },
+    "history": []
+  }
+}

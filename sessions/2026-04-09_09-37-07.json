@@ -1,0 +1,72 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-09_09-37-07",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……有什么事吗，制作人先生？"
+    },
+    {
+      "role": "user",
+      "content": "你好‘"
+    },
+    {
+      "role": "assistant",
+      "content": "……没话说了？"
+    },
+    {
+      "role": "user",
+      "content": "❤️"
+    },
+    {
+      "role": "assistant",
+      "content": "……没话说了？"
+    },
+    {
+      "role": "user",
+      "content": "你会干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……我是偶像。  \n……你问这个做什么。"
+    },
+    {
+      "role": "user",
+      "content": "好吧，要保护好自己"
+    },
+    {
+      "role": "assistant",
+      "content": "……有事吗。"
+    },
+    {
+      "role": "user",
+      "content": "好吧，我尊重你，那我先走了"
+    },
+    {
+      "role": "assistant",
+      "content": "……有事吗。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 32,
+    "intimacy": 14,
+    "sex": 0,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [
+        "会尊重边界"
+      ],
+      "events": [
+        "silence_event"
+      ],
+      "facts": [
+        "好吧，要保护好自己",
+        "好吧，我尊重你，那我先走了"
+      ]
+    },
+    "history": []
+  }
+}

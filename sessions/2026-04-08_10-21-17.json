@@ -1,0 +1,83 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-08_10-21-17",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……有事吗。"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=30 / 亲密度=10 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=30 / 亲密度=10 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=10 / 亲密开放度=0"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=10 / 亲密开放度=100"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=10 / 亲密开放度=100"
+    },
+    {
+      "role": "assistant",
+      "content": "⚙️ 已修改：好感度=100 / 亲密度=100 / 亲密开放度=100"
+    },
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "……你好。\n……我以为你不来了。\n……别想太多。"
+    },
+    {
+      "role": "user",
+      "content": "你会干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……真麻烦。"
+    },
+    {
+      "role": "user",
+      "content": "今天晚上能跟我吃晚饭吗"
+    },
+    {
+      "role": "assistant",
+      "content": "……随你的便。\n……反正我也没别的事。\n……别误会，我不是特意在等。"
+    },
+    {
+      "role": "user",
+      "content": "那我先走了"
+    },
+    {
+      "role": "assistant",
+      "content": "……随你。\n……反正我也没在等。\n……别走太久了，麻烦。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 100,
+    "intimacy": 100,
+    "sex": 100,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [],
+      "events": [],
+      "facts": [
+        "今天晚上能跟我吃晚饭吗"
+      ]
+    },
+    "history": []
+  }
+}

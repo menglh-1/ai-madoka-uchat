@@ -1,0 +1,41 @@
+{
+  "nick_name": "樋口円香",
+  "nature": "",
+  "current_session": "2026-04-09_17-46-02",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "……哈啊。有什么事吗，制作人先生？"
+    },
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "……你好。"
+    },
+    {
+      "role": "user",
+      "content": "你会干什么"
+    },
+    {
+      "role": "assistant",
+      "content": "……工作而已。"
+    }
+  ],
+  "state": {
+    "current_event": null,
+    "event_turns": 0,
+    "affection": 30,
+    "intimacy": 11,
+    "sex": 0,
+    "memory": {
+      "user_traits": [],
+      "emotional_flags": [],
+      "events": [],
+      "facts": []
+    },
+    "history": []
+  }
+}
