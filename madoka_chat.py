@@ -862,7 +862,7 @@ def build_prompt(state: dict, memory_hint: str, user_input: str) -> str:
 def call_llm(prompt: str) -> str | None:
     try:
         resp = client.chat.completions.create(
-            model="grok-3-mini",
+            model="grok-4-1-fast-reasoning",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
@@ -1106,6 +1106,8 @@ def fallback_reply(state: dict) -> str:
 
     elif aff >= 40:
         return pick_no_repeat(pools["mid_aff"], state)
+    elif aff <=30
+        return pick_no_repeat(pools["low_aff"], share)
 
     else:
         if random.random() < 0.3:
