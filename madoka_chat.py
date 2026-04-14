@@ -1106,7 +1106,7 @@ def fallback_reply(state: dict) -> str:
 
     elif aff >= 40:
         return pick_no_repeat(pools["mid_aff"], state)
-    elif aff <=30
+    elif aff <=30 :
         return pick_no_repeat(pools["low_aff"], share)
 
     else:
