@@ -1149,7 +1149,7 @@ def main():
         st.info("更新了新的好感度攻略系统（亲密开放度),用户可以通过聊天来增长或降低亲密开放度，不同程度的亲密开放度会有不同的态度回复。#开放了访客登入，优化了提示词与性格补充不生效的问题，现在用户可以利用以上账号登入系统进行聊谈，关闭了访客删除记录与直接使用后门增加好感度的功能，鼓励各位多聊天")
         st.stop()
 
-    authenticator.logout("退出登入", location="sidebar")
+    authenticator.logout("退出登入", location="sidebar", key="madoka_super_unique_logout_2026")
     st.sidebar.success(f"欢迎回来, {st.session_state.get('name')}")
 
     init_state()
