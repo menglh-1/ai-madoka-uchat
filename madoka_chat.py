@@ -495,7 +495,7 @@ def update_affection_and_intimacy(user_input: str, state: dict) -> dict:
     intimacy_delta = 0
     sex_delta = 0
 
-    mild_positive = ["喜欢你", "心疼你", "想你", "喜欢樋口", "樋口最可爱",
+    mild_positive = [ "心疼你", "想你", "喜欢樋口", "樋口最可爱",
                        "円香最可爱", "喜欢円香", "抱抱", "守护你", "特别的你"]
 
     strong_positive = ["谢谢你", "辛苦了", "晚安", "早安", "你很可爱", "你很漂亮",
