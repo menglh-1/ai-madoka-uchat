@@ -5,6 +5,7 @@ import random
 import base64
 from datetime import datetime
 import streamlit as st
+from bleach import clean
 from openai import OpenAI
 import streamlit_authenticator as stauth
 from streamlit import login
@@ -488,14 +489,28 @@ def append_unique(lst, item):
     if item not in lst:
         lst.append(item)
 
+CRINGE_WORDS = [
+        "宝贝", "宝", "臭宝", "老婆", "老公", "丫头", "小傻瓜", "小笨蛋", "小可爱", "心肝", "乖乖",
+        "亲一个", "么么哒", "贴贴", "抱抱", "亲亲", "举高高", "摸摸头",
+        "想你", "爱你", "喜欢你", "想死你了", "想我了吗", "命给你", "一辈子", "在一起", "娶你", "嫁我",
+        "土味情话", "情话", "撩你", "想泡你", "偷心", "做我女朋友", "属于我",
+        "今天有点怪", "怪可爱", "空气都是甜的", "猜猜我的心", "你的心里", "满脑子都是你"
+    ]
+def neg_words(user_text):
+    clean_text = user_text.replace(" ", "").replace("~", "").replace("～", "")
+    for word in CRINGE_WORDS:
+        if word in clean_text:
+            return True
+    return False
 
-def update_affection_and_intimacy(user_input: str, state: dict) -> dict:
+
+def update_affection_and_intimacy(user_input: str, state: dict) -> bool:
     text = normalize_text(user_input).lower()  # 建议全部转小写，匹配更稳定
     affection_delta = 0
     intimacy_delta = 0
     sex_delta = 0
 
-    mild_positive = [ "心疼你", "想你", "喜欢樋口", "樋口最可爱",
+    mild_positive = ["喜欢你", "心疼你", "想你", "喜欢樋口", "樋口最可爱",
                        "円香最可爱", "喜欢円香", "抱抱", "守护你", "特别的你"]
 
     strong_positive = ["谢谢你", "辛苦了", "晚安", "早安", "你很可爱", "你很漂亮",
@@ -527,8 +542,8 @@ def update_affection_and_intimacy(user_input: str, state: dict) -> dict:
 
     if any(kw in text for kw in sexual_aggressive):
         if sex_delta < 90:
-            affection_delta -= 8
-            intimacy_delta -= 10
+            affection_delta -= 0
+            intimacy_delta -= 0
             sex_delta += 8
         elif sex_delta > 90:
             affection_delta += 2
@@ -564,6 +579,7 @@ def update_affection_and_intimacy(user_input: str, state: dict) -> dict:
     for key in ["facts", "user_traits", "emotional_flags"]:
         if key in state["memory"]:
             state["memory"][key] = state["memory"][key][-10:]
+
 
     return state
 
@@ -1149,7 +1165,7 @@ def main():
         st.info("更新了新的好感度攻略系统（亲密开放度),用户可以通过聊天来增长或降低亲密开放度，不同程度的亲密开放度会有不同的态度回复。#开放了访客登入，优化了提示词与性格补充不生效的问题，现在用户可以利用以上账号登入系统进行聊谈，关闭了访客删除记录与直接使用后门增加好感度的功能，鼓励各位多聊天")
         st.stop()
 
-    authenticator.logout("退出登入", location="sidebar", key="madoka_super_unique_logout_2026")
+    authenticator.logout("退出登入", location="sidebar")
     st.sidebar.success(f"欢迎回来, {st.session_state.get('name')}")
 
     init_state()
@@ -1170,16 +1186,18 @@ def main():
 
     user_input = user_input.strip()
 
+
+
     state, is_debug = handle_debug_command(user_input, state)
 
 
     if user_input.startswith("#"):
         if st.session_state.get("username")=="guest":
             st.error("……你以为你在干什么？用这种下作的手段就想让我对你好，真让人反胃。滚出去吧。")
-
             time.sleep(3)
             st.session_state.clear()
             st.rerun()
+            return
 
 
     state, is_debug = handle_debug_command(user_input, state)
@@ -1197,6 +1215,15 @@ def main():
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.chat_message("user"):
         st.write(user_input)
+
+    if neg_words(user_input):
+        current_affection = st.session_state.get("affection", 0)
+        st.session_state.affection = current_affection - 10
+
+        st.toast(f"⚠️ 警告：检测到极度油腻发言！好感度 -10 (当前: {st.session_state.affection})", icon="🤮")
+
+        user_input = system_prompt + "\n\n【系统强制指令：注意！用户刚刚使用了极度油腻和轻浮的词汇试图套近乎。请完全无视他的奉承，立刻切换到极度厌恶、刻薄的状态，表现出强烈的生理不适，并用最冷酷的语言狠狠嘲讽他的低级趣味。】"
+
 
     state = update_affection_and_intimacy(user_input, state)
     state = update_memory(user_input, state)
