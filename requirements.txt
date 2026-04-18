@@ -49,3 +49,4 @@ typing_extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
 streamlit-authenticator
+bleach
