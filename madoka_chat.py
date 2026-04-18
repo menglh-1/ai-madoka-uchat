@@ -13,7 +13,7 @@ import time
 
 from ai聊谈 import update_memory
 
-APP_TITLE = "ai樋口円香v1.41"
+APP_TITLE = "ai樋口円香v1.42"
 AFFECTION_MIN, AFFECTION_MAX = 0, 100
 INTIMACY_MIN, INTIMACY_MAX = 0, 100
 SEX_MIN, SEX_MAX = 0, 100
@@ -1162,7 +1162,7 @@ def main():
         st.title("🔐 登录系统")
         st.info("访客账号：\n用户名：**guest**　密码：**guest123**")
         st.title("version1.41")
-        st.info("更新了新的好感度攻略系统（亲密开放度),用户可以通过聊天来增长或降低亲密开放度，不同程度的亲密开放度会有不同的态度回复。#开放了访客登入，优化了提示词与性格补充不生效的问题，现在用户可以利用以上账号登入系统进行聊谈，关闭了访客删除记录与直接使用后门增加好感度的功能，鼓励各位多聊天")
+        st.info("更新了新的好感度攻略系统（亲密开放度),用户可以通过聊天来增长或降低亲密开放度，不同程度的亲密开放度会有不同的态度回复。#开放了访客登入，优化了提示词与性格补充不生效的问题，现在用户可以利用以上账号登入系统进行聊谈，关闭了访客删除记录与直接使用后门增加好感度的功能，鼓励各位多聊天,新增土味情话识别系统，各位谨慎发言")
         st.stop()
 
     authenticator.logout("退出登入", location="sidebar")
@@ -1180,7 +1180,7 @@ def main():
     if os.path.exists(bg_path):
         set_bg(bg_path)
 
-    user_input = st.chat_input("说点什么...")
+    user_input = st.chat_input("说点什么吧...")
     if not user_input:
         return
 
@@ -1201,7 +1201,6 @@ def main():
 
 
     state, is_debug = handle_debug_command(user_input, state)
-
     if is_debug:
             st.session_state.state = state
             msg = f"⚙️ 已修改：好感度={state['affection']} / 亲密度={state['intimacy']} / 亲密开放度={state['sex']}"
@@ -1217,13 +1216,10 @@ def main():
         st.write(user_input)
 
     if neg_words(user_input):
-        current_affection = st.session_state.get("affection", 0)
-        st.session_state.affection = current_affection - 10
+        state['affection'] = max(0, state.get('affection', 30) - 10)
+        st.toast(f"⚠️ 警告：检测到极度油腻发言！好感度 -10 (当前: {state['affection']})", icon="🤮")
 
-        st.toast(f"⚠️ 警告：检测到极度油腻发言！好感度 -10 (当前: {st.session_state.affection})", icon="🤮")
-
-        user_input = system_prompt + "\n\n【系统强制指令：注意！用户刚刚使用了极度油腻和轻浮的词汇试图套近乎。请完全无视他的奉承，立刻切换到极度厌恶、刻薄的状态，表现出强烈的生理不适，并用最冷酷的语言狠狠嘲讽他的低级趣味。】"
-
+        user_input += "\n\n【系统强制指令：用户使用了油腻词汇。请表现出极度厌恶，狠狠嘲讽。】"
 
     state = update_affection_and_intimacy(user_input, state)
     state = update_memory(user_input, state)
