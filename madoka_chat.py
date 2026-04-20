@@ -1171,7 +1171,7 @@ def main():
     elif auth_status is None:
         st.title("🔐 登录系统")
         st.info("访客账号：\n用户名：**guest**　密码：**guest123**")
-        st.title("version1.42")
+        st.title("version1.51")
         st.info("优化了提示词与性格补充不生效的问题，现在用户可以利用以上账号登入系统进行聊谈，关闭了访客删除记录与直接使用后门增加好感度的功能.新增土味情话识别系统，各位谨慎发言,更新云端数据库存储会话记录,使用全新模型claude-3-haiku，聊天能力进一步增强")
         st.stop()
 
