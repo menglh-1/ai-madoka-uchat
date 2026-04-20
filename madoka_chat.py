@@ -444,7 +444,7 @@ def load_sessions():
     session_list = []
     cursor = db_collection.find({},{"currect_session":1}).sort("_id",-1)
     for filename in os.listdir("sessions"):
-            if current_session in doc:
+            if "current_session" in doc:
                 session_list.append(doc["current_session"])
     return session_list
 
