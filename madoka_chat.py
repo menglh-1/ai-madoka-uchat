@@ -10,7 +10,7 @@ from openai import OpenAI
 import streamlit_authenticator as stauth
 from streamlit import login
 import time
-import pygmongo
+import pymongo
 
 from ai聊谈 import update_memory
 

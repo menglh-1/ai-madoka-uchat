@@ -50,4 +50,4 @@ tzdata==2025.3
 urllib3==2.6.3
 streamlit-authenticator
 bleach
-pygmongo[srv]
+pymongo[srv]
