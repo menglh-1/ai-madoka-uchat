@@ -89,7 +89,7 @@ client = OpenAI(
 @st.cache_resource
 
 def init_db():
-    client = pygmongo.MonClient(st.secrets["MONGODB_URI"])
+    client = pymongo.MongoClient(st.secrets["MONGODB_URI"])
     db = client["madoka_uchat_db"]
     collection = db["chat_sessions"]
     return collection
