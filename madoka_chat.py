@@ -10,6 +10,7 @@ from openai import OpenAI
 import streamlit_authenticator as stauth
 from streamlit import login
 import time
+import pygmongo
 
 from ai聊谈 import update_memory
 
@@ -60,7 +61,7 @@ section[data-testid="stSidebar"] {
 }
 </style>
 """, unsafe_allow_html=True)
-##########################################
+##########################################(登入)
 names = ["Administrator", "Guest"]
 usernames = ["admin", "guest"]
 passwords = ["m20061108", "guest123"]
@@ -84,7 +85,18 @@ client = OpenAI(
     base_url="https://api.jiekou.ai/openai"
 )
 
+#++++++++++++++++++++++++++++++++++++++(数据库)
+@st.cache_resource
 
+def init_db():
+    client = pygmongo.MonClient(st.secrets["MONGODB_URI"])
+    db = client["madoka_uchat_db"]
+    collection = db["chat_sessions"]
+    return collection
+
+db_collection = init_db()
+
+#++++++++++++++++++++++++++++++++++++++(end)
 
 def render_sidebar(state: dict,SEX_MAX=100):
     with st.sidebar:
@@ -421,26 +433,25 @@ def save_session():
             "messages": st.session_state.messages,
             "state": st.session_state.state
         }
-        os.makedirs("sessions", exist_ok=True)
-        with open(f"sessions/{st.session_state.current_session}.json", "w", encoding="utf-8") as f:
-            json.dump(session_data, f, ensure_ascii=False, indent=2)
 
+        db_collection.update_one(
+           {"current_session": st.session_state.current_session},
+           {"$set": session_data},
+           upsert=True
+       )
 
 def load_sessions():
     session_list = []
-    if os.path.exists("sessions"):
-        for filename in os.listdir("sessions"):
-            if filename.endswith(".json"):
-                session_list.append(filename[:-5])
-    return sorted(session_list, reverse=True)
+    cursor = db_collection.find({},{"currect_session":1}).sort("_id",-1)
+    for filename in os.listdir("sessions"):
+            if currect_session in doc:
+                session_list.append(doc["currect_session"])
+    return session_list
 
 
 def load_session(session_name):
-    file_path = f"sessions/{session_name}.json"
-    if os.path.exists(file_path):
-        with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
+    data = db_collection.find_one({"current_session": session_name})
+    if data:
             st.session_state.messages = data.get("messages", [
                 {"role": "assistant", "content": "……有事吗,怎么又回来了"}
             ])
@@ -451,17 +462,13 @@ def load_session(session_name):
 
 
 def delete_session(session_name):
-    file_path = f"sessions/{session_name}.json"
-    if os.path.exists(file_path):
-        os.remove(file_path)
-
+    db_collection.delete_one({"current_session": session_name})
     if st.session_state.current_session == session_name:
         st.session_state.messages = [
             {"role": "assistant", "content": "……有什么事吗，制作人先生？"}
         ]
         st.session_state.state = default_state()
         st.session_state.current_session = generate_session_name()
-
     st.rerun()
 
 
